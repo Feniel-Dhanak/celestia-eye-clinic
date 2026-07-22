@@ -1,1 +1,0 @@
-# celestia-eye-clinic
