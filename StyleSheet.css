@@ -12,7 +12,7 @@ html, body{
     width: 100%;
 }
 
-body{
+body{   
     display: flex;
     flex-direction: column;
     background-color: #E3FFF9;
@@ -29,8 +29,8 @@ body{
 /*--------- HEADER ----------*/
 header{
     position: fixed;
-    padding: 0px 1.197%;
-    height: 80px;
+    padding: 0 1.197%;
+    height: 5rem;
     width: 100%;
     z-index: 10;
 
@@ -52,7 +52,7 @@ header{
     display: grid;
     grid-template-columns: auto 31.25% auto;
     margin: 0 auto;
-    height: 80px;
+    height: 5rem;
     width: 100%;
     max-width: 1798px;
     align-items: center;
@@ -68,7 +68,7 @@ header{
 li a{
     color:black;
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 li a:hover{
@@ -76,9 +76,9 @@ li a:hover{
 }
 
 .header-aptmt{
-    margin-right: 100px;
+    margin-right: 6.25rem;
     justify-self: end;
-    font-size: 17px;
+    font-size: 1.06rem;
     font-weight: 600;
 }
 
@@ -119,7 +119,7 @@ li a:hover{
 
 /* -------- HERO --------*/
 .hero{
-    min-height: 719px;
+    min-height: 44.93rem;
     overflow: hidden;
     position: relative;
     background: #bceee7;
@@ -137,7 +137,8 @@ li a:hover{
     mask-image: linear-gradient(
             to right,
             transparent 0%,
-            black 15%
+            transparent 4%,
+            black 20%
         );
 }
 
@@ -150,13 +151,13 @@ li a:hover{
 }
 
 .hero-content{
-    width: 50%;
-    padding: 128px 35px 45px 57px;
+    width: 70%;
+    padding: 8rem 2.18rem 2.81rem 3.56rem;
 }
 
 .hero h1{
     color: #163A5F;
-    font-size: clamp(44px, 5vw, 106px);
+    font-size: clamp(2.75rem, 5vw, 6.62rem);
     line-height: normal;
     font-weight: 600;
 }
@@ -169,20 +170,20 @@ li a:hover{
 }
 
 button {
-    padding: 14px 20px;
+    padding: 0.87em 1.25em;
     border-radius: 9px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .primary {
-    height: 73px;
+    height: 4.56rem;
     width: 100%;
     max-width: 334px;
     background: #009688;
     color: white;
     border: none;
-    font-size: 23px;
+    font-size: 1.43rem;
     font-weight: 600;
 
     box-shadow:
@@ -191,13 +192,13 @@ button {
 }
 
 .secondary {
-    height: 73px;
+    height: 4.56rem;
     width: 100%;
-    max-width: 170px;
+    max-width: 200px;
     background: white;
     color: #009688;
     border: 2px solid #009688;
-    font-size: 23px;
+    font-size: 1.43rem;
     font-weight: 600;
 
     box-shadow:
@@ -206,7 +207,7 @@ button {
 
 hr{
     border: none;
-    margin: 117px auto 0px auto;
+    margin: 7.31rem auto 0 auto;
     height: 2px;
     width: 100%;
     max-width: 1628px;
@@ -218,20 +219,20 @@ hr{
 .services{
     display: flex;
     flex-direction: column;
-    margin-top: 154px;
+    margin-top: 9.62rem;
     align-items: center;
 }
 
 .service-card-container{
     display: flex;
     flex-direction: column;
-    padding: 93px 61px;
-    gap: 93px;
+    padding: 5.81rem 3.81rem;
+    gap: 5.81rem;
 }
 
 .service-card{
     display: flex;
-    min-height: 373px;
+    min-height: 23.31rem;
     width: 100%;
     max-width: 1798px;
     border-radius: 29px;
@@ -241,26 +242,26 @@ hr{
 }
 
 .service-text{
-    margin-left: 58px;
-    margin-top: 49px;
+    margin-left: 3.625rem;
+    margin-top: 3.06rem;
 }
 
 .service-name{
-    margin-left: 0px;
+    margin-left: 0;
     text-decoration-line: underline;
-    font-size: clamp(34px,2.5vw,52px);
+    font-size: clamp(2.12rem, 2.5vw, 3.25rem);
     font-weight: 600;
 }
 
 .service-desc{
-    margin-left: 0px;
-    margin-top: 26px;
-    font-size: clamp(19px, 2vw, 46px);
+    margin-left: 0;
+    margin-top: 1.2rem;
+    font-size: clamp(1.19rem, 2vw, 2.87rem);
     font-weight: 400;
 }
 
 .service-card-image{
-    margin: 49px 49px;
+    margin: 3rem 3rem;
     height: auto;
     object-fit: cover;
     width: 100%;
@@ -273,13 +274,13 @@ hr{
 
 .service-card:nth-child(even) .service-text{
     margin-left: 0;
-    margin-right: 58px;
+    margin-right: 3.62rem;
     text-align: right;
 }
 
 .service-learn-more{
     margin: 0 auto;
-    font-size: clamp(29px, 5vw, 70px);
+    font-size: clamp(1.81rem, 5vw, 4.37rem);
     font-weight: 600;
     text-decoration-line: underline;
     color: #163A5F;
@@ -289,29 +290,29 @@ hr{
 .meet-your-doctor{
     display: flex;
     flex-direction: column;
-    margin-top: 154px;
+    margin-top: 9.62rem;
     align-items: center;
 }
 
 .doc-info-container{
     display: flex;
-    margin: 126px 152px 0 152px;
+    margin: 7.87rem 9.5rem 0 9.5rem;
     width: 100%;
     max-width: 1798px;
-    padding-bottom: 93px;
+    padding-bottom: 5.81rem;
     gap: 52px;
 }
 
 .doc-name{
     margin-left: 0;
-    font-size: clamp(35px, 3vw, 70px);
+    font-size: clamp(2.2rem, 3vw, 4.36rem);
     font-weight: 700;
 }
 
 .doc-edu{
     margin-left: 0;
     margin-top: 54px;
-    font-size: clamp(39px, 2vw, 54px);
+    font-size: clamp(2.44rem, 2vw, 3.37rem);
     font-weight: 600;
 }
 
@@ -319,20 +320,20 @@ hr{
     margin-left: 0;
     margin-top: 13px;
     font-style: italic;
-    font-size: clamp(22px, 2vw, 46px);
+    font-size: clamp(1.37rem, 2vw, 2.87rem);
     font-weight:300;
 }
 
 .doc-para{
     margin-left: 0;
-    margin-top: 54px;
-    font-size: clamp(16px, 1.5vw, 37px);
+    margin-top: 3.37rem;
+    font-size: clamp(1rem, 1.5vw, 2.31rem);
     font-weight: 300;
 }
 
 .full-bio{
     margin: 0 auto;
-    font-size: clamp(29px, 5vw, 70px);
+    font-size: clamp(1.81rem, 5vw, 4.37rem);
     font-weight: 600;
     text-decoration-line: underline;
     color: #163A5F;
@@ -340,7 +341,7 @@ hr{
 
 h2{
     margin: 0 auto;
-    font-size: clamp(36px, 5vw, 85px);
+    font-size: clamp(2.25rem, 5vw, 5.31rem);
     font-weight: 600;
     text-decoration-line: underline;
     color: #163A5F;
@@ -350,19 +351,19 @@ h2{
 .features-section{
     display: flex;
     flex-direction: column;
-    margin-top: 154px;
+    margin-top: 9.62rem;
     align-items: center;
 }
 
 .feature-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 220px auto 100px auto;
+    margin: 13.75rem auto 6.25rem auto;
     background-color: #000000;
 }
 
 .feature{
-    padding: 100px 100px 100px 0;
+    padding: 6.25em 6.25em 6.25em 0;
     max-width: 670px;
     background-color: #E3FFF9;
     border-bottom: 2px solid #000000;
@@ -370,7 +371,7 @@ h2{
 }
 
 .feature:nth-child(even){
-    padding: 100px 0 100px 100px;
+    padding: 6.25em 0 6.25em 6.25em;
     border-right: none;
 }
 
@@ -380,33 +381,35 @@ h2{
 
 
 h3{
-    font-size: clamp(26px, 2.2vw, 47px);
+    font-size: clamp(1.62rem, 2.2vw, 2.93rem);
     font-weight: 500;
 }
 
 .feature p{
     margin-left: 0;
-    margin-top: 43px;
+    margin-top: 2.69rem;
     text-align: left;
-    font-size: clamp(22px, 1.9vw, 40px);
+    font-size: clamp(1.37rem, 1.9vw, 2.5rem);
     font-weight: 300;
 }
 
+/* ------------ BOTTOM CTA --------------- */
 .bottom-cta-section{
     display: flex;
     flex-direction: column;
-    margin-top: 154px;
+    margin-top: 9.62rem;
     align-items: center;
 }
 
 .bottom-cta{
-    margin-top: 175px;
+    margin-top: 10.94rem;
 }
 
+/* ------------- FOOTER SECTION -------------- */
 .footer{
-    margin-top: 232px;
-    padding: 0 150px;
-    min-height: 222px;
+    margin-top: 14.5rem;
+    padding: 0 9.37rem;
+    min-height: 13.87rem;
     background-color: #00000086;
 }
 
@@ -419,10 +422,10 @@ h3{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 3.12rem;
     width: 100%;
     max-width: 1798px;
-    padding-top: 44px;
+    padding-top: 2.75rem;
 }
 
 .footer-content{
@@ -431,15 +434,15 @@ h3{
 }
 
 .content-heading{
-    font-size: 30px;
+    font-size: 1.87rem;
     font-weight: 500;
     color: #ffffff;
 }
 
 .footer-content-details{
     margin-left: 0;
-    margin-top: 18px;
-    font-size: 15px;
+    margin-top: 1.12rem;
+    font-size: 0.93rem;
     font-weight: 300;
     color: #ffffff;
 }
@@ -449,7 +452,7 @@ h3{
 }
 
 .footer-line{
-    margin-top: 18px;
+    margin-top: 1.12rem;
     width: 100%;
     max-width: 1900px;
     background-color: #ffffff;
@@ -457,8 +460,8 @@ h3{
 
 .copyright{
     margin: 0;
-    padding: 18px 0;
-    font-size: 15px;
+    padding: 1.12rem 0;
+    font-size: 0.93rem;
     font-weight: 300;
     color: #ffffff;
     text-align: center;
@@ -467,6 +470,7 @@ h3{
 .copyright-span{
     font-weight: 600;
 }
+
 
 /* ====================================
     RESPONSIVE BREAKPOINTS
