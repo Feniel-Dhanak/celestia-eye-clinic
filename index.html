@@ -22,12 +22,18 @@
                     <img src="./images/Logo Image.png" alt="Clinic Logo">
                 </div>
 
-                <ul class="nav-items">
+                <ul class="nav-items" id="navItems">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Services</a></li>
                 </ul>
                 <p class="header-aptmt">Appointment: +91 3126457918</p>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navItems">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
 
         </header>
@@ -207,6 +213,36 @@
 
         <p class="copyright">Copyright <span class="copyright-span">Celestia Eye Clinic</span> All Rights Reserved</p>
     </footer>
+
+    <script>
+        // Mobile Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navItems = document.getElementById('navItems');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navItems.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close the menu after tapping a link (mobile UX)
+        navItems.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navItems.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close the menu if the viewport is resized back up to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                navItems.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 
 </body>
 </html>
