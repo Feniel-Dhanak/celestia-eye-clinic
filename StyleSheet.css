@@ -22,6 +22,14 @@ body{
     flex: 1 0 auto;
 }
 
+h2{
+    margin: 0 auto;
+    font-size: clamp(2.25rem, 5vw, 5.31rem);
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #163A5F;
+}
+
 .footer{
     flex-shrink: 0;
 }
@@ -358,14 +366,6 @@ hr{
     color: #163A5F;
 }
 
-h2{
-    margin: 0 auto;
-    font-size: clamp(2.25rem, 5vw, 5.31rem);
-    font-weight: 600;
-    text-decoration-line: underline;
-    color: #163A5F;
-}
-
 /* --------------- FEATURES ------------------ */
 .features-section{
     margin-top: 9.62rem;
@@ -441,10 +441,10 @@ h3{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 3.12rem;
+    padding: 0 3.12em;
+    padding-top: 2.75em;
     width: 100%;
     max-width: 1798px;
-    padding-top: 2.75rem;
 }
 
 .footer-content{
@@ -460,7 +460,7 @@ h3{
 
 .footer-content-details{
     margin-left: 0;
-    margin-top: 1.12rem;
+    margin-top: 1.12em;
     font-size: 0.93rem;
     font-weight: 300;
     color: #ffffff;
@@ -471,7 +471,7 @@ h3{
 }
 
 .footer-line{
-    margin-top: 1.12rem;
+    margin-top: 0.92rem;
     width: 100%;
     max-width: 1900px;
     background-color: #ffffff;
@@ -479,7 +479,7 @@ h3{
 
 .copyright{
     margin: 0;
-    padding: 1.12rem 0;
+    padding: 1.12em 0;
     font-size: 0.93rem;
     font-weight: 300;
     color: #ffffff;
@@ -497,6 +497,10 @@ h3{
 
 /* ------------ Large Laptop Screen (<=1600px) -------------- */
 @media (max-width: 1600px){
+
+    h2{
+            font-size: clamp(2.25rem, 4.5vw, 5.31rem);
+    }
 
     /* ---------- Header section --------- */
     header{
@@ -576,6 +580,19 @@ h3{
 
     .feature:nth-child(even){
         padding: 6.25em 0 6.25em 4.25em;
+    }
+
+    /* --------- Footer Section  ---------- */
+    .content-heading{
+        font-size: 1.57rem;
+    }
+
+    .footer-content-details{
+        font-size: 0.82rem;
+    }
+
+    .copyright{
+        font-size: 0.82rem;
     }
 
 }
