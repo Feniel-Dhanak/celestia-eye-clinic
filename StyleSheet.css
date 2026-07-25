@@ -52,7 +52,7 @@ header{
     display: grid;
     grid-template-columns: auto 31.25% auto;
     margin: 0 auto;
-    height: 5rem;
+    height: auto;
     width: 100%;
     max-width: 1798px;
     align-items: center;
@@ -119,7 +119,7 @@ li a:hover{
 
 /* -------- HERO --------*/
 .hero{
-    min-height: 44.93rem;
+    height: auto;
     overflow: hidden;
     position: relative;
     background: #bceee7;
@@ -131,15 +131,27 @@ li a:hover{
     right: 0;
     bottom: 0;
     width: 60%;
-    background-image: url("./images/Home page Image.jpg");
-    background-size: cover;
-    background-position: center;
-    mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            transparent 4%,
-            black 20%
-        );
+    overflow: hidden;
+}
+
+.hero-image::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to right,
+        #bceee7 0%,
+         #bceee7 4%,
+        transparent 20%
+    )
+}
+
+.hero-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero-container{
@@ -180,7 +192,6 @@ button {
 }
 
 .primary {
-    /* width: 100%; */
     max-width: 20.87em;
     background: #009688;
     color: white;
@@ -194,14 +205,13 @@ button {
 }
 
 .secondary {
-    /* width: 100%; */
+    padding: 0.87em 1em;
     max-width: 12.5em;
     background: white;
     color: #009688;
     border: 2px solid #009688;
     font-size: 1.43rem;
     font-weight: 600;
-
     box-shadow:
         7px 7px 17px rgba(0, 0, 0, .25);
 }
@@ -227,13 +237,13 @@ hr{
 .service-card-container{
     display: flex;
     flex-direction: column;
-    padding: 8.81rem 6.81rem;
+    padding: 7.87rem 6.81rem;
     gap: 5.81rem;
 }
 
 .service-card{
     display: flex;
-    min-height: 23.31rem;
+    height: auto;
     width: 100%;
     max-width: 1598px;
     border-radius: 29px;
@@ -243,32 +253,32 @@ hr{
 }
 
 .service-text{
+    height: auto;
     margin-left: 3.625rem;
     margin-top: 3.06rem;
-    height: auto;
 }
 
 .service-name{
     margin-left: 0;
     text-decoration-line: underline;
-    font-size: clamp(2rem, 2.5vw, 3.13rem);
-    font-weight: 600;
+    font-size: clamp(1.7rem, 2.5vw, 2.83rem);
+    font-weight: 500;
 }
 
 .service-desc{
     margin-left: 0;
     margin-top: 1.2rem;
-    font-size: clamp(1.07rem, 2vw, 2.75rem);
-    font-weight: 400;
+    font-size: clamp(0.47rem, 2vw, 2.1rem);
+    font-weight: 300;
 }
 
 .service-card-image{
-    margin: 3em;
+    padding: 3em;
     height: auto;
+    width: auto;
+    max-width: 40.75rem;
     object-fit: cover;
-    width: 100%;
     border-radius: 29px;
-    max-width: 37.5em;
 }
 
 .service-card:nth-child(even){
@@ -283,9 +293,8 @@ hr{
 
 .service-learn-more{
     margin: 0 auto;
-    font-size: clamp(1.81rem, 5vw, 4.37rem);
-    font-weight: 600;
-    text-decoration-line: underline;
+    font-size: clamp(1.51rem, 5vw, 4.07rem);
+    font-weight: 400;
     color: #163A5F;
 }
 
@@ -299,11 +308,19 @@ hr{
 
 .doc-info-container{
     display: flex;
-    margin: 7.87rem 9.5rem 0 9.5rem;
-    width: 100%;
-    max-width: 1798px;
+    width: min(100% - 10rem, 1798px);
+    margin-top: 7.87rem;
     padding-bottom: 5.81rem;
     gap: 52px;
+}
+
+.doc-info-container img{
+    width: 30%;
+    object-fit: contain;
+}
+
+.doc-info{
+    flex: 1;
 }
 
 .doc-name{
@@ -336,9 +353,8 @@ hr{
 
 .full-bio{
     margin: 0 auto;
-    font-size: clamp(1.81rem, 5vw, 4.37rem);
-    font-weight: 600;
-    text-decoration-line: underline;
+    font-size: clamp(1.51rem, 5vw, 4.07rem);
+    font-weight: 400;
     color: #163A5F;
 }
 
@@ -352,29 +368,29 @@ h2{
 
 /* --------------- FEATURES ------------------ */
 .features-section{
+    margin-top: 9.62rem;
     display: flex;
     flex-direction: column;
-    margin-top: 9.62rem;
     align-items: center;
 }
 
 .feature-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 13.75rem auto 6.25rem auto;
+    margin: 7.87rem auto 6.25rem auto;
     background-color: #000000;
 }
 
 .feature{
-    padding: 6.25em 6.25em 6.25em 0;
-    max-width: 670px;
+    padding: 4.75em 4.75em 4.75em 0;
+    max-width: 550px;
     background-color: #E3FFF9;
     border-bottom: 2px solid #000000;
     border-right: 2px solid #000000;
 }
 
 .feature:nth-child(even){
-    padding: 6.25em 0 6.25em 6.25em;
+    padding: 4.75em 0 4.75em 4.75em;
     border-right: none;
 }
 
@@ -384,7 +400,7 @@ h2{
 
 
 h3{
-    font-size: clamp(1.62rem, 2.2vw, 2.93rem);
+    font-size: clamp(1.52rem, 2.2vw, 2.83rem);
     font-weight: 500;
 }
 
@@ -392,7 +408,7 @@ h3{
     margin-left: 0;
     margin-top: 2.69rem;
     text-align: left;
-    font-size: clamp(1.37rem, 1.9vw, 2.5rem);
+    font-size: clamp(1.37rem, 1.9vw, 1.5rem);
     font-weight: 300;
 }
 
@@ -405,7 +421,7 @@ h3{
 }
 
 .bottom-cta{
-    margin-top: 10.94rem;
+    margin-top: 9.69rem;
 }
 
 /* ------------- FOOTER SECTION -------------- */
@@ -479,61 +495,87 @@ h3{
     RESPONSIVE BREAKPOINTS
     ==================================== */
 
-/* ------------ Large Laptop Screen (<=1440px) -------------- */
-@media (max-width: 1440px){
+/* ------------ Large Laptop Screen (<=1600px) -------------- */
+@media (max-width: 1600px){
 
     /* ---------- Header section --------- */
-    li a{font-size: 1.4rem;}
-    .header-aptmt{font-size: 0.96rem;}
+    header{
+        height: 4.25rem;
+
+    }
+
+    .logo img{
+        margin: auto;
+        height: 4rem;
+    }
+
+    li a{
+        font-size: 1.29rem;
+    }
+
+    .header-aptmt{
+        font-size: 0.85rem;
+    }
 
     /* ---------- Hero Section ---------*/
     .hero h1{
-        font-size: clamp(2.75rem, 4.5vw, 6.62rem);
+        font-size: clamp(2.75rem, 5vw, 6.62rem);
     }
 
     .hero-image{
-        width: 67%;
-        background-size: 120%;
-        background-position: 25% center;
+        width: 60%;
+    }
+
+    .hero-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 15% center;
         mask-image: linear-gradient(
             to right,
             transparent 0%,
-            transparent 1%,
+            transparent 4%,
             black 20%
         );
     }
 
     .hero-buttons{
-        flex-direction: column;
-        gap: 2.25rem;
-        align-items: flex-start;
+        gap: 5.25rem;
     }
 
     .primary,
     .secondary{
-        font-size: 1.33rem;
+        font-size: 1.23rem;
     }
 
     /* -------- Service Section --------- */
-    .service-card{
-        min-height: 13rem;
+    .service-card-container{
+        padding: 8.81rem 7.81rem;
     }
 
      .service-card-image{
-        /* max-width: 32.5em; */
-        height: 14rem;
+        max-width: 32.75rem;
     }
 
-    .service-text{
-        max-height: 224px;
+    /* ---------- Doctor Section ---------- */
+    .doc-info-container{
+        margin: 7.87rem 9.5rem 0 9.5rem;
     }
 
-    .service-name{
-        font-size: clamp(1.6rem, 2.5vw, 2.73rem);
+    .meet-your-doctor img{
+        max-height: 666px;
     }
 
-    .service-desc{
-        font-size: clamp()
+    .feature-grid{
+        margin: 5.81rem 16.12rem 6.25rem 16.12rem;
+    }
+
+    .feature{
+        padding: 6.25em 4.25em 6.25em 0;
+    }
+
+    .feature:nth-child(even){
+        padding: 6.25em 0 6.25em 4.25em;
     }
 
 }
