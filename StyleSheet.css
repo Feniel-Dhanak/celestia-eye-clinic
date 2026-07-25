@@ -193,7 +193,7 @@ li a:hover{
 
 button {
     padding: 0.87em 1.6em;
-    min-height: 3.5rem;
+    height: auto;
     border-radius: 9px;
     font-weight: bold;
     cursor: pointer;
@@ -213,8 +213,8 @@ button {
 }
 
 .secondary {
-    padding: 0.87em 1em;
     max-width: 12.5em;
+    padding: 0.87em 1em;
     background: white;
     color: #009688;
     border: 2px solid #009688;
@@ -226,11 +226,10 @@ button {
 
 hr{
     border: none;
-    margin: 7.31rem auto 0 auto;
+    margin: 7.31rem auto 0;
     height: 2px;
-    width: 100%;
+    width: calc(100% - 15rem);
     max-width: 1628px;
-    align-self: center;
     background-color: black;
 }
 
@@ -339,7 +338,7 @@ hr{
 
 .doc-edu{
     margin-left: 0;
-    margin-top: 54px;
+    margin-top: 3.37rem;
     font-size: clamp(2.44rem, 2vw, 3.37rem);
     font-weight: 600;
 }
@@ -428,7 +427,7 @@ h3{
 .footer{
     margin-top: 14.5rem;
     padding: 0 9.37rem;
-    min-height: 13.87rem;
+    height: auto;
     background-color: #00000086;
 }
 
@@ -504,7 +503,7 @@ h3{
 
     /* ---------- Header section --------- */
     header{
-        height: 4.25rem;
+        height: auto;
 
     }
 
@@ -522,12 +521,9 @@ h3{
     }
 
     /* ---------- Hero Section ---------*/
-    .hero h1{
-        font-size: clamp(2.75rem, 5vw, 6.62rem);
-    }
 
     .hero-image{
-        width: 60%;
+        width: 61%;
     }
 
     .hero-image img{
@@ -538,8 +534,7 @@ h3{
         mask-image: linear-gradient(
             to right,
             transparent 0%,
-            transparent 4%,
-            black 20%
+            black 8%
         );
     }
 
@@ -570,7 +565,7 @@ h3{
     }
 
     .service-learn-more{
-        font-size: clamp(1.51rem, 4vw, 4.07rem);
+        font-size: clamp(1.51rem, 3.5vw, 4.07rem);
     }
 
     /* ---------- Doctor Section ---------- */
@@ -582,13 +577,18 @@ h3{
         max-height: 666px;
     }
 
+    .doc-edu,
+    .doc-para{
+        margin-top: 2.77rem;
+    }
+
     .full-bio{
-        font-size: clamp(1.51rem, 4vw, 4.07rem);
+        font-size: clamp(1.51rem, 3.5vw, 4.07rem);
     }
 
     /* ---------- Features Section ----------- */
     .feature-grid{
-        margin: 5.81rem 16.12rem 6.25rem 16.12rem;
+        margin: 5.81rem 16.12rem 4.69em 16.12rem;
     }
 
     .feature{
@@ -615,9 +615,177 @@ h3{
 }
 
 
-/* ------------ Desktop/Laptop Screens (<=1200px) ------------ */
+/* ------------ Small Laptop Screens (<=1200px) ------------ */
 @media (max-width: 1200px){
-    .nav-items{
+
+        h2{
+            font-size: clamp(2.25rem, 4.5vw, 5.31rem);
+    }
+
+    /* ---------- Header section --------- */
+    header{
+        height: auto;
+
+    }
+
+    .logo img{
+        margin: auto;
+        height: 3rem;
+    }
+
+    li a{
+        font-size: 1.08rem;
+    }
+
+    .header-aptmt{
+        font-size: 0.64rem;
+    }
+
+    /* ---------- Hero Section ---------*/
+    .hero-content{
+        padding-top: 6.37rem;
+    }
+
+    .hero h1{
+        font-size: clamp(2.75rem, 4.5vw, 6.62rem);
+    }
+
+    .hero-image{
+        width: 63%;
+    }
+
+    .hero-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 15% center;
+        mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 7%
+        );
+    }
+
+    .hero-buttons{
+        gap: 4rem;
+    }
+
+    .primary{
+        padding: 0.87em 1.4em;
+        font-size: 0.95rem;
+
+    }
+
+    .secondary{
+        padding: 0.87em 0.8em;
+        font-size: 1.03rem;
+    }
+
+    /* -------- Service Section --------- */
+    .services{
+        margin-top: 6.5rem;
+    }
+
+    .service-card-container{
+        padding: 5.69rem 7.81rem;
+        gap: 3.81rem;
+    }
+
+    .service-name{
+        font-size: clamp(1.7rem, 2.1vw, 2.83rem);
+    }
+
+    .service-desc{
+        font-size: clamp(0.47rem, 1.6vw, 2.1rem);
+    }
+
+     .service-card-image{
+        padding: 2.5em;
+        max-width: 25.75rem;
+    }
+
+    .service-learn-more{
+        font-size: clamp(1.51rem, 3.5vw, 4.07rem);
+    }
+
+    /* ---------- Doctor Section ---------- */
+    .meet-your-doctor{
+        margin-top: 6.5rem;
+    }
+
+    .doc-info-container{
+        margin: 5.69rem 9.5rem 0 9.5rem;
+    }
+
+    .meet-your-doctor img{
+        max-height: 666px;
+    }
+
+    .doc-name{
+        font-size: clamp(2.2rem, 3.7vw, 4.36rem)
+    }
+
+    .doc-edu{
+        margin-top: 2.77rem;
+        font-size: clamp(1.9rem, 2.5vw, 3.37rem)
+    }
+
+    .doc-para{
+        margin-top: 2.77rem;
+    }
+
+
+    /* ---------- Features Section ----------- */
+    .features-section{
+        margin-top: 6.5rem;
+    }
+    .feature-grid{
+        margin: 5.69rem 11.12rem 3.13rem 11.12rem;
+    }
+
+    .feature{
+        padding: 3.25em 4.25em 3.25em 0;
+        max-width: 600px;
+    }
+
+    .feature:nth-child(even){
+        padding: 3.25em 0 3.25em 4.25em;
+    }
+
+    /* -------- Bottom CTA section --------- */
+    .bottom-cta-section{
+        margin-top: 6.5rem;
+    }
+
+    .bottom-cta{
+        margin-top: 8.46rem;
+    }
+
+    /* --------- Footer Section  ---------- */
+    .footer{
+        padding: 0 6.37rem;
+        margin-top: 13.25rem;
+    }
+
+    .footer-div{
+        padding-top: 2.25em;
+    }
+
+    .content-heading{
+        font-size: 1.27rem;
+    }
+
+    .footer-content-details{
+        font-size: 0.71rem;
+    }
+
+    .copyright{
+        font-size: 0.71rem;
+    }
+
+}
+    /* ----------- Header Section ---------- */
+    /* .nav-items{
         margin-left: 5%;
         gap: 10%;
     }
@@ -643,8 +811,8 @@ h3{
     .footer-div{
         padding: 0 40px;
         margin: 0;
-    }
-}
+    } 
+}*/
 
 /* ----------------- Tablets (<=900px) ------------- */
 @media (max-width: 900px){
