@@ -947,9 +947,27 @@ h3{
 /* ------------ Mobile Phones (<=500px) --------------- */
 @media(max-width: 500px){
 
+    h2{
+        font-size: 1.66rem;
+        margin: 0 auto;
+    }
+
+    hr{
+        margin-top: 1.87rem;
+        width: calc(100% - 1.5rem);
+    }
+
     /* --------- Header section --------- */
+    header{
+        padding: 0 0.7rem;
+    }
+
+    .header-container{
+        padding: 0;
+    }
+
     .logo img{
-        max-height: 236px;
+        height: 2.2rem;
     }
 
     /* --------- Hero Section --------- */
@@ -985,52 +1003,179 @@ h3{
     .hero h1{
         margin-top: 0;
         margin-bottom: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .hero-buttons{
         margin-top: 0;
         flex-direction: column;
         align-items: stretch;
-        gap: 16px;
+        gap: 1rem;
     }
 
     .primary,
     .secondary{
+        font-size: 1.1rem;
         max-width: 100%;
+        padding: 0.67em 1.4em;
     }
 
-    .service-text,
+    /* ---------- Services Section ---------- */
+    .services{
+        margin-top: 2.31rem;
+    }
+
+    .service-card-container{
+        padding: 1.87rem 1.5rem;
+        gap: 1.87rem;
+    }
+
+    .service-card{
+        border-radius: 12px;
+        box-shadow: 7px 7px 11px 3px rgba(0, 0, 0, 0.25),
+        4px 3px 10px 1px rgba(255, 255, 255, 0.25) inset;
+    }
+
+    .service-card:nth-child(even){
+        flex-direction: column;
+    }
+
     .service-card:nth-child(even) .service-text{
-        margin: 24px 20px 0 20px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .service-text{
+        padding: 1.37rem 1.17rem 2.25rem;
+        margin: 0;
+    }
+
+    .service-name{
+        text-align: center;
+        font-size: 1.55rem;
+    }
+
+    .service-desc{
+        font-size: 1.05rem;
+        margin-top: 0.93rem;
     }
 
     .service-card-image{
-        margin: 20px;
+        margin: 0;
+        padding: 0 1.56rem 1.37rem;
+        border-radius: 12px;
+    }
+
+    .service-learn-more{
+        margin-top: 0.62rem;
+        font-size: 1.55rem;
+    }
+
+    /* ----------- Doctor Section ----------- */
+    .meet-your-doctor{
+        margin-top: 2.31rem;
     }
 
     .doc-info-container{
-        margin: 60px 20px 0 20px;
+        padding: 0;
+        margin: 1.87rem 1.25rem 0;
+        width: min(100% - 2.5rem, 1798px);
+    }
+
+    .doc-info-container img{
+        margin: 0 auto;
+        width: 56%;
+    }
+
+    .doc-name{
+        font-size: 1.67rem;
+    }
+
+    .doc-edu{
+        margin-top: 1.06rem;
+        font-size: 1.11rem;
+    }
+
+    .doc-college{
+        margin-top: 0.37rem;
+        font-size: 0.92rem;
+    }
+
+    .doc-para{
+        margin-top: 1.06rem;
+        font-size: 0.92rem;
+        font-weight: 200;
+    }
+
+    .doc-desc-2{
+        margin-top: 0.9rem;
+    }
+
+    .full-bio{
+        margin-top: 2.5rem;
+        font-size: 1.55rem;
+    }
+
+    /* -------- Features Section -------- */
+    .features-section{
+        margin-top: 2.31rem; 
+    }
+
+    .feature-grid{
+        display: flex;
+        flex-direction: column;
+        margin: 1.87rem 0 0;
+        gap: 1px;
     }
 
     .feature{
-        padding: 48px 24px;
+        padding: 0.93rem 1.62rem;
+        border: none;
+    }
+
+    .feature:nth-child(even){
+        padding: 0.93rem 1.62rem;
+        border: none;
+    }
+
+    .feature:nth-child(even) p,
+    .feature:nth-child(even) h3{
+        text-align: right;
+    }
+
+    .feature:nth-child(odd){
+        background-color: #B5E5DB;
+    }
+
+    h3{
+        font-size: 1.12rem;
+    }
+
+    .feature p{
+        margin-top: 0.75rem;
+        font-size: 0.81rem;
+    }
+
+    /* ------- Botton CTA Section ------- */
+    .bottom-cta-section{
+        margin-top: 2.31rem;
+    }
+
+    .bottom-cta{
+        margin-top: 3.18rem;
+        width: 100%;
+        max-width: 18.87em;
+    }
+
+    /* -------- Footer Section --------- */
+    .footer{
+        margin-top: 5.43rem;
     }
 
     .footer-div{
         flex-direction: column;
         margin: 0 24px;
         gap: 28px;
-    }
-
-    .services,
-    .meet-your-doctor,
-    .features-section,
-    .bottom-cta-section{
-        margin-top: 64px;
-    }
-
-    hr{
-        margin-top: 50px;
     }
 
 }
