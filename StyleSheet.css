@@ -34,6 +34,12 @@ h2{
     flex-shrink: 0;
 }
 
+.footer a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 /*--------- HEADER ----------*/
 header{
     position: fixed;
@@ -429,6 +435,20 @@ h3{
     padding: 0 9.37rem;
     height: auto;
     background-color: #00000086;
+}
+
+.footer-toggle{
+    all: unset;
+    display: block;
+    cursor: default;
+}
+
+.footer-toggle i{
+    display: none;
+}
+
+.footer-dropdown{
+    display: block;
 }
 
 .footer-container{
@@ -1161,6 +1181,11 @@ h3{
         margin-top: 2.31rem;
     }
 
+    .bottom-cta-heading{
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .bottom-cta{
         margin-top: 3.18rem;
         width: 100%;
@@ -1168,14 +1193,77 @@ h3{
     }
 
     /* -------- Footer Section --------- */
+    .footer a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .footer{
         margin-top: 5.43rem;
+        padding: 0;
     }
 
     .footer-div{
         flex-direction: column;
-        margin: 0 24px;
-        gap: 28px;
+        margin: 0;
+        padding: 0 1.2rem;
+        gap: 1px;
+    }
+
+    .footer-content{
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    i{
+        color: #ffffff;
+    }
+
+    .footer-toggle{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        padding: 1.56rem 0.5rem;
+        cursor: pointer;
+    }
+
+    .footer-toggle i{
+        display: block;
+        transition: transform 0.35s ease;
+    }
+
+    .footer-toggle.active i{
+        transform: rotate(180deg);
+    }
+
+    .footer-dropdown{
+        display: none;
+    }
+
+    .footer-dropdown.active{
+        display: block;
+    }
+
+    .footer-content-details{
+        margin: 0;
+        padding: 0 0.5rem 0.5rem;
+    }
+
+    .content-heading{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .footer-line{
+        display: none;
+    }
+
+    .social-container{
+        display: flex;
+        flex-direction: column;
     }
 
 }

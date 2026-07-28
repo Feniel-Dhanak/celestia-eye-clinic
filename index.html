@@ -180,32 +180,65 @@
             <div class="footer-div">
 
                 <div class="footer-content address-container">
-                    <h4 class="content-heading address-heading">Address</h4>
-                    <p class="footer-content-details address-content">
-                        Celestia Eye Clinic<br>
-                        302, 3rd Floor, Silver Pearl Building,<br>
-                        Junction of Waterfield Road & 30th<br>
-                        Road, Bandra West, Mumbai, Maharashtra 400050
-                    </p>
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading address-heading">Address</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details address-content">
+                            Celestia Eye Clinic<br>
+                            302, 3rd Floor, Silver Pearl Building,<br>
+                            Junction of Waterfield Road & 30th<br>
+                            Road, Bandra West, Mumbai, Maharashtra 400050
+                        </p>
+                    </div>
                 </div>
 
                 <div class="footer-content contact-container">
-                    <h4 class="content-heading contact-heading">Contact</h4>
-                    <p class="footer-content-details">+91 5649721974 / 3126457918</p>
-                    <p class="footer-content-details">celestiaeyeclinic@mail.com</p>
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading contact-heading">Contact</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">+91 5649721974 / 3126457918</p>
+                        <p class="footer-content-details">celestiaeyeclinic@mail.com</p>
+                    </div>
                 </div>
 
                 <div class="footer-content hours-container">
-                    <h4 class="content-heading hours-heading">Hours</h4>
-                    <p class="footer-content-details">Mon - Fri</p>
-                    <p class="footer-content-details">10AM - 6PM</p>
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading hours-heading">Hours</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">Mon - Fri</p>
+                        <p class="footer-content-details">10AM - 6PM</p>
+                    </div>
                 </div>
 
                 <div class="footer-content social-container">
-                    <h4 class="content-heading social-heading">Social</h4>
-                    <p class="footer-content-details"><i class="bi bi-instagram"></i> Instagram</p>
-                    <p class="footer-content-details"><i class="bi bi-youtube"></i> YouTube</p>
-                    <p class="footer-content-details"><i class="bi bi-facebook"></i> Facebook</p>
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading social-heading">Social</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <a class="footer-content-details" href="#">
+                            <span><i class="bi bi-instagram"></i> Instagram</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details" href="#">
+                            <span><i class="bi bi-youtube"></i> YouTube</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details" href="#">
+                            <span><i class="bi bi-facebook"></i> Facebook</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -217,6 +250,14 @@
     </footer>
 
     <script>
+        const toggles = document.querySelectorAll(".footer-toggle");
+        toggles.forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                toggle.classList.toggle("active");
+                toggle.nextElementSibling.classList.toggle("active");
+            })
+        })
+
         // Mobile Navigation toggle
         const navToggle = document.getElementById('navToggle');
         const navItems = document.getElementById('navItems');
