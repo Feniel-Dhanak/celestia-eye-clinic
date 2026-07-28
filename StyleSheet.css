@@ -823,7 +823,7 @@ h3{
 
     .nav-items{
         position: fixed;
-        top: 80px;
+        top: var(--header-height);
         left: 0;
         width: 100%;
         margin: 0;
@@ -1264,6 +1264,11 @@ h3{
     .social-container{
         display: flex;
         flex-direction: column;
+    }
+
+    .copyright{
+        font-size: 0.57rem;
+        margin: 0.75rem auto;
     }
 
 }

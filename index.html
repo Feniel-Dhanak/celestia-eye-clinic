@@ -258,6 +258,16 @@
             })
         })
 
+        const header = document.querySelector("header");
+        function updateHeaderheight(){
+            document.documentElement.style.setProperty(
+                "--header-height",
+                `${header.offsetHeight}px`
+            );
+        }
+        updateHeaderheight();
+        window.addEventListener("resize", updateHeaderheight);
+
         // Mobile Navigation toggle
         const navToggle = document.getElementById('navToggle');
         const navItems = document.getElementById('navItems');
