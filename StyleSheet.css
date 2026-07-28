@@ -290,7 +290,7 @@ hr{
     height: auto;
     width: auto;
     max-width: 40.75rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 29px;
 }
 
@@ -965,7 +965,7 @@ h3{
 }
 
 /* ------------ Mobile Phones (<=500px) --------------- */
-@media(max-width: 500px){
+@media(max-width: 700px){
 
     h2{
         font-size: 1.66rem;
@@ -1228,6 +1228,8 @@ h3{
         border: none;
         padding: 1.56rem 0.5rem;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
     }
 
     .footer-toggle i{
@@ -1240,11 +1242,15 @@ h3{
     }
 
     .footer-dropdown{
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding-bottom 0.35s ease;
+        /* display: none; */
     }
 
     .footer-dropdown.active{
-        display: block;
+        max-height: 500px;
+        padding-bottom: 1.56rem;;
     }
 
     .footer-content-details{
