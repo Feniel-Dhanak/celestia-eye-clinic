@@ -181,8 +181,6 @@
                 toggle.nextElementSibling.classList.toggle("active");
             })
         })
-        updateHeaderheight();
-        window.addEventListener("resize", updateHeaderheight);
 
         // Mobile Navigation toggle
         const navToggle = document.getElementById('navToggle');
@@ -211,6 +209,8 @@
                 `${header.offsetHeight}px`
             );
         }
+        updateHeaderheight();
+        window.addEventListener("resize", updateHeaderheight);
 
         // Close the menu if the viewport is resized back up to desktop
         window.addEventListener('resize', () => {

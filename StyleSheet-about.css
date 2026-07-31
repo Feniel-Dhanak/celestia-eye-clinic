@@ -157,13 +157,14 @@ li a:hover{
 
 .clinic-div{
     display: flex;
-    margin: 7.68rem 3.62rem 0;
+    margin: 7.68rem auto 0;
     gap: 3.81rem;
 }
 
 .clinic-div img{
     width: auto;
     max-width: 56.93rem;
+    margin: 0 auto;
     object-fit: contain;
 }
 
@@ -578,4 +579,200 @@ li a:hover{
         margin: 0;
         gap: 32px;
     }
+}
+
+/* ------------ Mobile Phones (<=500px) --------------- */
+@media(max-width: 700px){
+
+    h2{
+        font-size: 1.66rem;
+        margin: 0 auto;
+    }
+
+    hr{
+        margin-top: 1.87rem;
+        width: calc(100% - 1.5rem);
+    }
+
+    /* --------- Header section --------- */
+    header{
+        padding: 0 0.7rem;
+    }
+
+    .header-container{
+        padding: 0;
+    }
+
+    .logo img{
+        height: 2.2rem;
+    }
+
+    /* ----------- Clinic Section ------------ */
+    .about-the-clinic{
+        margin: 6.68rem auto 0;
+    }
+
+    .clinic-heading-div{
+        gap: 2rem;
+    }
+
+    .clinic-heading-div::before,
+    .clinic-heading-div::after{
+        height: 2px;
+        margin: 0 auto;
+    }
+
+    .clinic-div{
+        display: flex;
+        flex-direction: column;
+        margin: 4.68rem auto 0;
+        gap: 0.81rem;
+        align-items: center;
+    }
+
+    .clinic-div img{
+        display: block;
+        width: 100%;
+        max-width: 21.87rem;
+        height: auto;
+        padding: 0 0.5rem 2rem;
+    }
+
+    .clinic-para{
+        padding: 0 1rem;
+        font-size: 0.92rem;
+        font-weight: 200;
+    }
+
+    /* ----------- Doctor Section ----------- */
+    .meet-your-doctor{
+        margin-top: 4.18rem;
+    }
+
+    .doc-info-container{
+        padding: 0;
+        margin: 4.68rem auto 0;
+        width: min(100% - 2.5rem, 1798px);
+    }
+
+    .doc-info-container img{
+        margin: 0 auto;
+        width: 56%;
+    }
+
+    .doc-name{
+        font-size: 1.67rem;
+    }
+
+    .doc-edu{
+        margin-top: 1.06rem;
+        font-size: 1.11rem;
+    }
+
+    .doc-college{
+        margin-top: 0.37rem;
+        font-size: 0.92rem;
+    }
+
+    .doc-para{
+        margin-top: 1.06rem;
+        font-size: 0.92rem;
+        font-weight: 200;
+        text-align: left;
+    }
+
+    .doc-desc-2{
+        margin-top: 0.9rem;
+    }
+
+    .full-bio{
+        margin-top: 2.5rem;
+        font-size: 1.55rem;
+    }
+
+    /* -------- Footer Section --------- */
+    .footer a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer{
+        margin-top: 5.43rem;
+        padding: 0;
+    }
+
+    .footer-div{
+        flex-direction: column;
+        margin: 0;
+        padding: 0 1.2rem;
+        gap: 1px;
+    }
+
+    .footer-content{
+        border-bottom: 1px solid #b2b2b2;
+    }
+
+    i{
+        color: #ffffff;
+    }
+
+    .footer-toggle{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        padding: 1.56rem 0.5rem;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    .footer-toggle i{
+        display: block;
+        transition: transform 0.35s ease;
+    }
+
+    .footer-toggle.active i{
+        transform: rotate(180deg);
+    }
+
+    .footer-dropdown{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding-bottom 0.35s ease;
+        /* display: none; */
+    }
+
+    .footer-dropdown.active{
+        max-height: 500px;
+        padding-bottom: 1.56rem;;
+    }
+
+    .footer-content-details{
+        margin: 0;
+        padding: 0 0.5rem 0.5rem;
+    }
+
+    .content-heading{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .footer-line{
+        display: none;
+    }
+
+    .social-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copyright{
+        font-size: 0.57rem;
+        margin: 0.75rem auto;
+    }
+
 }
