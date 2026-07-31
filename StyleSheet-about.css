@@ -772,7 +772,7 @@ li a:hover{
 
     .copyright{
         font-size: 0.57rem;
-        margin: 0.75rem auto;
+        margin: 0.75rem auto 0;
     }
 
 }
