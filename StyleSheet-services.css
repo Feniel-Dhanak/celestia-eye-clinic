@@ -139,69 +139,40 @@ li a:hover{
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ================= CLINIC SECTION ================= */
+/* ================= SERVICE INTRO ================= */
 
-.about-the-clinic{
-    display: flex;
-    flex-direction: column;
-    margin: 9.68rem auto 0;
-}
-
-.clinic-container{
+.service-intro-container{
+    margin: 8.68rem auto 0;
     width: min(100% - 10rem, 1798px);
-    margin: 0 auto;
 }
 
-.clinic-heading-div{
-    display: flex;
-    margin: 0 auto;
-    gap: 2.25rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.clinic-heading-div::before,
-.clinic-heading-div::after{
-    content: "";
-    flex: 1;
-    height: 3px;
-    max-width: 257px;
-    background: #000000;
-}
-
-.clinic-div{
-    display: flex;
-    margin: 7.68rem auto 0;
-    gap: 3.81rem;
-}
-
-.clinic-div img{
-    width: auto;
-    max-width: 56.93rem;
-    margin: 0 auto;
-    object-fit: contain;
-}
-
-.clinic-para{
+.service-intro{
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 147%;
+    text-align: center;
 }
- 
-/* ================= DOCTOR SECTION ================= */
 
-.meet-your-doctor{
+.service-intro span:last-child{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* ================= SERVICE SECTION ================= */
+
+.service-section{
     display: flex;
     flex-direction: column;
-    margin: 9.68rem auto 0;
+    margin-top: 9rem;
+    align-items: center;
+    gap: 0;
 }
 
-.doctor-container{
-    width: min(100% - 10rem, 1798px);
-    margin: 0 auto;
+.service-container{
+    width: min(100% - 0rem, 1920px);
+    margin: 0;
 }
 
-.doctor-heading-div{
+.service-heading-div{
     display: flex;
     margin: 0 auto;
     gap: 2.25rem;
@@ -209,8 +180,8 @@ li a:hover{
     justify-content: center;
 }
 
-.doctor-heading-div::before,
-.doctor-heading-div::after{
+.service-heading-div::before,
+.service-heading-div::after{
     content: "";
     flex: 1;
     height: 3px;
@@ -218,49 +189,98 @@ li a:hover{
     background: #000000;
 }
 
-.doc-info-container{
+
+/* -------- Service Blocks ---------- */
+.service-blocks-container{
+    display: flex; 
+    flex-direction: column;
+    margin: 10.31rem auto 0;
+    width: 100%;
+}
+
+.service-block{
+    position: relative;
     display: flex;
-    margin: 7.68rem auto 0;
-    gap: 3.25rem;
+    height: auto;
+    overflow: hidden;
+    background-color: #94E4D3;
 }
 
-.doc-info-container img{
-    width: 25%;
-    object-fit: contain;
+.service-text{
+    position: relative;
+    z-index: 2;
+    width: 47%;
+    padding: 3.25rem 3.5rem 11.18rem;
 }
 
-.doc-info{
-    flex: 1;
-}
-
-.doc-name{
-    margin-left: 0;
-    font-size: clamp(2.2rem, 3vw, 4.36rem);
-    font-weight: 700;
-}
-
-.doc-edu{
-    margin-left: 0;
-    margin-top: 3.37rem;
-    font-size: clamp(2.44rem, 2vw, 3.37rem);
+.service-name{
+    font-size: 2.5em;
     font-weight: 600;
 }
 
-.doc-college{
-    margin-left: 0;
-    margin-top: 13px;
-    font-style: italic;
-    font-size: clamp(1.37rem, 2vw, 2.87rem);
+.service-desc{
+    padding-top: 2.06rem;
+    font-size: 1.68rem;
     font-weight: 300;
+    line-height: 150%;
 }
 
-.doc-para{
-    margin-left: 0;
-    margin-top: 3.37rem;
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 147%;
+.service-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
+
+.service-image::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to right,
+        #94E4D3 0%,
+        #94E4D3 5%,
+        transparent 35%
+    );
+}
+
+.service-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+}
+
+.service-block:nth-child(even){
+    background-color: #56DED7;
+}
+
+.service-block:nth-child(even) .service-image{
+    left: 0;
+    right: auto;
+}
+
+.service-block:nth-child(even) .service-image::before{
+    background: linear-gradient(
+        to left,
+        #56DED7 0%,
+        #56DED7 5%,
+        transparent 35%
+    );
+}
+
+.service-block:nth-child(even) .service-text{
+    margin-left: auto;
+    text-align: right;
+}
+
+
+
+
 
 /* ================= FOOTER SECTION ================= */
 
@@ -374,46 +394,31 @@ li a:hover{
         font-size: 0.85rem;
     }
 
-    /* ---------- Clinic Section ---------- */
+    /* ---------- Service Intro ---------- */
 
-    .about-the-clinic{
-        margin: 9.48rem auto 0;
+    .service-intro-container{
+        width: min(100% - 9rem, 1798px);
     }
 
-    .clinic-div img{
-        max-width: 45rem;
+    .service-intro{
+        font-size: 1.3rem;
     }
 
-    .clinic-para{
-        font-size: 1.2rem;
+    /* ---------- Service Section ---------- */
+    .service-text{
+        width: 47%;
     }
 
-    /* ---------- Doctor Section ---------- */
-
-    .doc-info-container{
-        margin: 7.68rem auto 0;
+    .service-name{
+        font-size: 2.4rem;
     }
 
-    .meet-your-doctor img{
-        width: 25%;
-        object-fit: cover;
+    .service-desc{
+        font-size: 1.28rem;
     }
 
-    .doc-name{
-        font-size: clamp(2.2rem, 3vw, 4.36rem);
-    }
-
-    .doc-edu{
-        font-size: clamp(2.44rem, 0.5vw, 3.37rem);
-    }
-
-    .doc-college{
-        font-size: clamp(1.37rem, 1vw, 2.87rem);
-    }
-
-    .doc-para{
-        margin-top: 2.77rem;
-        font-size: 1.2rem;
+    .service-image{
+        width: 53%;
     }
 
     /* ---------- Footer ---------- */
