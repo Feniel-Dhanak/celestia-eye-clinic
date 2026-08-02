@@ -41,18 +41,6 @@
         </header>
 
         <main>
-            <!----------------- Service Intro -------------------->
-            <div class="service-intro-container">
-                <p class="service-intro">
-                    Whether you need a routine eye check-up or advanced
-                    vision-restoring surgery, Celestia Eye Clinic offers expert
-                    care tailored to every stage of life.
-                    <br>
-                    <br>
-                    <span>Browse our complete range of specialized treatments below.</span>
-                </p>
-            </div>
-
             <!--------------- Service Section ----------------->
             <section class="service-section">
                 <div class="service-container">
@@ -65,8 +53,17 @@
 
                         <!------- Service 1 ------->
                         <div class="service-block block-1">
+                            <div class="service-image">
+                                <img src="./images/SP_service_1.png" alt="Laser vision correction">
+                                <button class="service-close" aria-label="Close">
+                                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                                </button>
+                            </div>
                             <div class="service-text">
-                                <p class="service-name">Laser Vision Correction</p>
+                                <div class="service-header">
+                                    <p class="service-name">Laser Vision Correction</p>
+                                    <i class="bi bi-chevron-down service-chevron" aria-hidden="true"></i>
+                                </div>
                                 <p class="service-desc">
                                     Achieve greater visual freedom with advanced
                                     laser vision correction for nearsightedness,
@@ -78,15 +75,21 @@
                                     tailored to your individual needs.
                                 </p>
                             </div>
-                            <div class="service-image">
-                                <img src="./images/SP_service_1.png">
-                            </div>
                         </div>
-
+ 
                         <!------- Service 2 ------->
                         <div class="service-block block-2">
+                            <div class="service-image">
+                                <img src="./images/SP_service_2.png" alt="Advanced cataract surgery">
+                                <button class="service-close" aria-label="Close">
+                                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                                </button>
+                            </div>
                             <div class="service-text">
-                                <p class="service-name">Advanced Cataract Surgery</p>
+                                <div class="service-header">
+                                    <p class="service-name">Advanced Cataract Surgery</p>
+                                    <i class="bi bi-chevron-down service-chevron" aria-hidden="true"></i>
+                                </div>
                                 <p class="service-desc">
                                     Restore clear vision through state-of-the-artcataract
                                     surgery performed with advanced microsurgicaltechniques.
@@ -96,15 +99,21 @@
                                     care ensure a smooth treatment experience and lasting results.
                                 </p>
                             </div>
-                            <div class="service-image">
-                                <img src="./images/SP_service_2.png">
-                            </div>
                         </div>
-
+ 
                         <!------- Service 3 ------->
                         <div class="service-block block-3">
+                            <div class="service-image">
+                                <img src="./images/SP_service_3.png" alt="Retinal disease therapy">
+                                <button class="service-close" aria-label="Close">
+                                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                                </button>
+                            </div>
                             <div class="service-text">
-                                <p class="service-name">Retinal Disease Therapy</p>
+                                <div class="service-header">
+                                    <p class="service-name">Retinal Disease Therapy</p>
+                                    <i class="bi bi-chevron-down service-chevron" aria-hidden="true"></i>
+                                </div>
                                 <p class="service-desc">
                                     Our retinal care services provide expert diagnosis
                                     and treatment for conditions including diabetic retinopathy,
@@ -115,15 +124,21 @@
                                     long-term retinal health.
                                 </p>
                             </div>
-                            <div class="service-image">
-                                <img src="./images/SP_service_3.png">
-                            </div>
                         </div>
-
+ 
                         <!------- Service 4 ------->
                         <div class="service-block block-4">
+                            <div class="service-image">
+                                <img src="./images/SP_service_4.png" alt="Glaucoma care">
+                                <button class="service-close" aria-label="Close">
+                                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                                </button>
+                            </div>
                             <div class="service-text">
-                                <p class="service-name">Glaucoma Care</p>
+                                <div class="service-header">
+                                    <p class="service-name">Glaucoma Care</p>
+                                    <i class="bi bi-chevron-down service-chevron" aria-hidden="true"></i>
+                                </div>
                                 <p class="service-desc">
                                     Protect your vision with comprehensive glaucoma
                                     screening, diagnosis, and long-term management.
@@ -134,15 +149,21 @@
                                     for the future.
                                 </p>
                             </div>
-                            <div class="service-image">
-                                <img src="./images/SP_service_4.png">
-                            </div>
                         </div>
-
+ 
                         <!------- Service 5 ------->
                         <div class="service-block block-5">
+                            <div class="service-image">
+                                <img src="./images/SP_service_5.png" alt="Comprehensive eye examinations">
+                                <button class="service-close" aria-label="Close">
+                                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                                </button>
+                            </div>
                             <div class="service-text">
-                                <p class="service-name">Comprehensive Eye Examinations</p>
+                                <div class="service-header">
+                                    <p class="service-name">Comprehensive Eye Examinations</p>
+                                    <i class="bi bi-chevron-down service-chevron" aria-hidden="true"></i>
+                                </div>
                                 <p class="service-desc">
                                     Comprehensive eye examinations provide a
                                     complete assessment of your vision and overall
@@ -152,9 +173,6 @@
                                     eye examinations support timely treatment and
                                     lifelong visual wellness.
                                 </p>
-                            </div>
-                            <div class="service-image">
-                                <img src="./images/SP_service_5.png">
                             </div>
                         </div>
 
@@ -291,6 +309,84 @@
                 navToggle.setAttribute('aria-expanded', 'false');
             }
         });
+
+        // Service Section: mobile expanding-photo rows
+        const serviceBlocks = document.querySelectorAll('.service-block');
+        const serviceHeaders = document.querySelectorAll('.service-header');
+        const serviceCloseButtons = document.querySelectorAll('.service-close');
+        const mobileServiceQuery = window.matchMedia('(max-width: 700px)');
+
+        function collapseAllServiceBlocks(){
+            serviceBlocks.forEach(block => {
+                block.classList.remove('expanded');
+            });
+            serviceHeaders.forEach(header => {
+                header.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        function toggleServiceBlock(block){
+            const  wasExpanded = block.classList.contains('expanded');
+            collapseAllServiceBlocks();
+            if (!wasExpanded) {
+                block.classList.add('expanded');
+                const header = block.querySelector('.service-header');
+                if (header) header.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        function handleServiceHeaderClick(e){
+            toggleServiceBlock(e.currentTarget.closest('.service-block'));
+        }
+ 
+        function handleServiceHeaderKeydown(e){
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleServiceBlock(e.currentTarget.closest('.service-block'));
+            }
+        }
+ 
+        function handleServiceCloseClick(e){
+            toggleServiceBlock(e.currentTarget.closest('.service-block'));
+        }
+ 
+        function enableMobileServiceToggle(){
+            serviceHeaders.forEach(header => {
+                header.setAttribute('tabindex', '0');
+                header.setAttribute('role', 'button');
+                header.setAttribute('aria-expanded', 'false');
+                header.addEventListener('click', handleServiceHeaderClick);
+                header.addEventListener('keydown', handleServiceHeaderKeydown);
+            });
+            serviceCloseButtons.forEach(btn => {
+                btn.addEventListener('click', handleServiceCloseClick);
+            });
+        }
+ 
+        function disableMobileServiceToggle(){
+            collapseAllServiceBlocks();
+            serviceHeaders.forEach(header => {
+                header.removeAttribute('tabindex');
+                header.removeAttribute('role');
+                header.removeAttribute('aria-expanded');
+                header.removeEventListener('click', handleServiceHeaderClick);
+                header.removeEventListener('keydown', handleServiceHeaderKeydown);
+            });
+            serviceCloseButtons.forEach(btn => {
+                btn.removeEventListener('click', handleServiceCloseClick);
+            });
+        }
+ 
+        function handleMobileServiceQueryChange(e){
+            if (e.matches) {
+                enableMobileServiceToggle();
+            } else {
+                disableMobileServiceToggle();
+            }
+        }
+ 
+        handleMobileServiceQueryChange(mobileServiceQuery);
+        mobileServiceQuery.addEventListener('change', handleMobileServiceQueryChange);
     </script>
 
 </body>

@@ -22,6 +22,11 @@ body{
     flex: 1 0 auto;
 }
 
+button,
+a{
+    -webkit-tap-highlight-color: transparent;
+}
+
 h2{
     margin: 0 auto;
     font-size: clamp(2.25rem, 5vw, 5.31rem);
@@ -81,12 +86,32 @@ header{
     gap: 20%;
 }
 li a{
+    position: relative;
     color: black;
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #163A5F;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
 li a:hover{
     color: #163A5F;
+}
+
+li a:hover::after{
+    transform: scaleX(1);
 }
 
 .header-aptmt{
@@ -207,6 +232,8 @@ button {
 }
 
 .primary {
+    position: relative;
+    overflow: hidden;
     max-width: 20.87em;
     background: #009688;
     color: white;
@@ -217,9 +244,16 @@ button {
     box-shadow:
         7px 7px 17px rgba(0, 0, 0, 0.25),
         inset 7px 7px 16px rgba(174, 216, 255, 0.25);
+
+        transition: transform 0.25s ease,
+                        color 0.25s ease,
+                        background-color 0.25s ease;
 }
 
 .secondary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     max-width: 12.5em;
     padding: 0.87em 1em;
     background: white;
@@ -229,6 +263,10 @@ button {
     font-weight: 600;
     box-shadow:
         7px 7px 17px rgba(0, 0, 0, .25);
+    
+    transition: transform .25s ease,
+                    color .25s ease,
+                    box-shadow .25s ease;
 }
 
 hr{
@@ -240,7 +278,7 @@ hr{
     background-color: black;
 }
 
-/* ================= Services ================= */
+/* ================= SERVICES ================= */
 
 .services{
     display: flex;
@@ -307,10 +345,38 @@ hr{
 }
 
 .service-learn-more{
+    position: relative;
+    display: block;
+    width: fit-content;
     margin: 0 auto;
     font-size: clamp(1.51rem, 5vw, 4.07rem);
     font-weight: 400;
     color: #163A5F;
+
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+}
+
+.service-learn-more::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background-color: #163A5F;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-learn-more:hover{
+    transform: translateX(20px);
+}
+
+.service-learn-more:hover::after{
+    transform: scaleX(1);
 }
 
 /* ============== Meet your Doctor ============= */
@@ -368,10 +434,36 @@ hr{
 }
 
 .full-bio{
+    display: block;
     margin: 0 auto;
     font-size: clamp(1.51rem, 5vw, 4.07rem);
     font-weight: 400;
     color: #163A5F;
+
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+}
+
+.full-bio::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background-color: #163A5F;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.full-bio:hover{
+    transform: translateX(20px);
+}
+
+.full-bio:hover::after{
+    transform: scaleX(1);
 }
 
 /* ================= FEATURES ================= */
@@ -947,7 +1039,8 @@ h3{
     }
 
     .feature{
-        border-bottom: 2px solid #000000;
+        border-bottom: 1px solid #000000;
+        border-right: none;
     }
 
     .feature:last-child{
@@ -1049,6 +1142,23 @@ h3{
         padding: 0.67em 1.4em;
     }
 
+    .primary:active{
+        transform: translateY(-4px);
+        background-color: #04aa99;
+
+        box-shadow:
+            0 12px 24px rgba(0,0,0,.18),
+            inset 7px 7px 16px rgba(174,216,255,.25);
+    }
+
+    .secondary:active{
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 12px 24px rgba(0,0,0,.18),
+            inset 7px 7px 16px rgba(174,216,255,.25);
+    }
+
     /* ---------- Services Section ---------- */
     .services{
         margin-top: 2.31rem;
@@ -1100,6 +1210,10 @@ h3{
         font-size: 1.55rem;
     }
 
+    .service-learn-more::after{
+        height: 2px;
+    }
+
     /* ----------- Doctor Section ----------- */
     .meet-your-doctor{
         margin-top: 2.31rem;
@@ -1145,6 +1259,10 @@ h3{
         font-size: 1.55rem;
     }
 
+    .full-bio::after{
+        height: 2px;
+    }
+
     /* -------- Features Section -------- */
     .features-section{
         margin-top: 2.31rem; 
@@ -1159,12 +1277,14 @@ h3{
 
     .feature{
         padding: 0.93rem 1.62rem;
-        border: none;
     }
 
     .feature:nth-child(even){
         padding: 0.93rem 1.62rem;
-        border: none;
+    }
+
+    .feature:nth-child(n+3){
+        border-bottom: 1px solid black;
     }
 
     .feature:nth-child(even) p,
@@ -1281,4 +1401,39 @@ h3{
         margin: 0.75rem auto;
     }
 
+}
+
+@media(hover: hover) and (pointer: fine){
+    .primary:hover{
+    transform: translateY(-4px);
+    background-color: #04aa99;
+
+    box-shadow:
+        0 12px 24px rgba(0,0,0,.18),
+        inset 7px 7px 16px rgba(174,216,255,.25);
+    }
+    .primary:active{
+        transform: translateY(-1px);
+    }
+
+    .secondary::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:#009688;
+
+        transform:scaleX(0);
+        transform-origin:left;
+
+        transition:.3s ease;
+        z-index:-1;
+    }
+
+    .secondary:hover::before{
+        transform:scaleX(1);
+    }
+
+    .secondary:hover{
+        color:white;
+    }
 }
