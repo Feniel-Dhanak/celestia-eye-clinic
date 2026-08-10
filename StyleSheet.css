@@ -262,12 +262,28 @@ button {
     padding: 2rem 3rem;
     width: min(400px, calc(100% - 2rem));
     max-height: calc(100vh -  4rem);
+    clip-path: inset(0 round 15px);
     overflow-y: auto;
+    overflow-x: hidden;
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter:blur(13px);
     background: rgba(255, 255, 255, 0.76);
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0, 70, 80, 0.22)
+}
+
+.apntmt-form-div::-webkit-scrollbar {
+    width: 6px;
+}
+
+.apntmt-form-div::-webkit-scrollbar-track {
+    margin: 8px 0;
+    background: transparent;
+}
+
+.apntmt-form-div::-webkit-scrollbar-thumb {
+    background: #009c95;
+    border-radius: 10px;
 }
 
 .apntmt-form-div.open{
