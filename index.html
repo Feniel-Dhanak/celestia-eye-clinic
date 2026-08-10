@@ -51,7 +51,7 @@
                         </h1>
 
                         <div class="hero-buttons">
-                            <button class="primary"> BOOK APPOINTMENT</button>
+                            <button class="primary" id="appointmentBtn"> BOOK APPOINTMENT</button>
                             <Button class="secondary">CALL NOW</Button>
                         </div>
                     </div>
@@ -61,6 +61,48 @@
                 </div>
 
             </section>
+
+            <!--------------- APPOINTMENT FORM --------------->
+            <div class="apntmt-form-div">
+                <form class="apntmt-form" action="POST">
+                    
+                    <div class="form-name-div">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder=" eg: Akhil Kumar" required>
+                    </div>
+
+                    <div class="form-phone-div">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]+" required>
+                    </div>
+
+                    <div class="form-date-select">
+                        <label for="date">Select available date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-time-select">
+                        <label for="time">Select available time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+
+                    <div class="form-reason-div">
+                        <label for="reason">Reason for visit</label>
+                        <input type="text" id="reason" name="reason" required>
+                    </div>
+
+                    <div class="form-submit-btn">
+                        <input class="form-btn" type="submit" value="Submit">
+                    </div>
+
+                    <div class="form-cancel-btn" id="appointmentCancBtn">
+                        <input class="form-btn" type="button" value="Cancel">
+                    </div>
+
+                </form>
+
+            </div>
+                
 
             <hr>
 
@@ -297,6 +339,19 @@
                 navToggle.setAttribute('aria-expanded', 'false');
             }
         });
+
+        // Book Appointment Form
+        const appointmentBtn = document.querySelector("#appointmentBtn");
+        const appointmentForm = document.querySelector(".apntmt-form-div");
+        appointmentBtn.addEventListener("click", () => {
+            appointmentForm.classList.add("open");
+        })
+
+        // Appointment Cancel btn function
+        const appointmentCancBtn = document.querySelector("#appointmentCancBtn");
+        appointmentCancBtn.addEventListener("click", () => {
+            appointmentForm.classList.remove("open");
+        })
     </script>
 
 </body>
