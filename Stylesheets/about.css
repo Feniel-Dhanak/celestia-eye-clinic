@@ -1,0 +1,370 @@
+/* ================= CLINIC SECTION ================= */
+
+.about-the-clinic{
+    display: flex;
+    flex-direction: column;
+    margin: 9.68rem auto 0;
+}
+
+.clinic-container{
+    width: min(100% - 10rem, 1798px);
+    margin: 0 auto;
+}
+
+.clinic-heading-div{
+    display: flex;
+    margin: 0 auto;
+    gap: 2.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.clinic-heading-div::before,
+.clinic-heading-div::after{
+    content: "";
+    flex: 1;
+    height: 3px;
+    max-width: 257px;
+    background: #000000;
+}
+
+.clinic-div{
+    display: flex;
+    margin: 7.68rem auto 0;
+    gap: 3.81rem;
+}
+
+.clinic-div img{
+    width: auto;
+    max-width: 56.93rem;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.clinic-para{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 147%;
+}
+ 
+/* ================= DOCTOR SECTION ================= */
+
+.meet-your-doctor{
+    display: flex;
+    flex-direction: column;
+    margin: 9.68rem auto 0;
+}
+
+.doctor-container{
+    width: min(100% - 10rem, 1798px);
+    margin: 0 auto;
+}
+
+.doctor-heading-div{
+    display: flex;
+    margin: 0 auto;
+    gap: 2.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-heading-div::before,
+.doctor-heading-div::after{
+    content: "";
+    flex: 1;
+    height: 3px;
+    max-width: 257px;
+    background: #000000;
+}
+
+.doc-info-container{
+    display: flex;
+    margin: 7.68rem auto 0;
+    gap: 3.25rem;
+}
+
+.doc-info-container img{
+    width: 25%;
+    object-fit: contain;
+}
+
+.doc-info{
+    flex: 1;
+}
+
+.doc-name{
+    margin-left: 0;
+    font-size: clamp(2.2rem, 3vw, 4.36rem);
+    font-weight: 700;
+}
+
+.doc-edu{
+    margin-left: 0;
+    margin-top: 3.37rem;
+    font-size: clamp(2.44rem, 2vw, 3.37rem);
+    font-weight: 600;
+}
+
+.doc-college{
+    margin-left: 0;
+    margin-top: 13px;
+    font-style: italic;
+    font-size: clamp(1.37rem, 2vw, 2.87rem);
+    font-weight: 300;
+}
+
+.doc-para{
+    margin-left: 0;
+    margin-top: 3.37rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 147%;
+}
+
+
+/* ====================================
+    RESPONSIVE BREAKPOINTS
+==================================== */
+
+/* ------------ Large Laptop Screens (<=1600px) -------------- */
+
+@media (max-width: 1600px){
+
+    h2{
+        font-size: clamp(2.25rem, 3.7vw, 5.31rem);
+    }
+
+    /* ---------- Clinic Section ---------- */
+
+    .about-the-clinic{
+        margin: 9.48rem auto 0;
+    }
+
+    .clinic-div img{
+        max-width: 45rem;
+    }
+
+    .clinic-para{
+        font-size: 1.2rem;
+    }
+
+    /* ---------- Doctor Section ---------- */
+
+    .doc-info-container{
+        margin: 7.68rem auto 0;
+    }
+
+    .meet-your-doctor img{
+        width: 25%;
+        object-fit: cover;
+    }
+
+    .doc-name{
+        font-size: clamp(2.2rem, 3vw, 4.36rem);
+    }
+
+    .doc-edu{
+        font-size: clamp(2.44rem, 0.5vw, 3.37rem);
+    }
+
+    .doc-college{
+        font-size: clamp(1.37rem, 1vw, 2.87rem);
+    }
+
+    .doc-para{
+        margin-top: 2.77rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ------------ Small Laptop Screens (<=1200px) ------------ */
+
+@media (max-width: 1200px){
+
+    h2{
+        font-size: clamp(2.25rem, 3.7vw, 5.31rem);
+    }
+
+    /* ---------- Clinic Section ---------- */
+
+    .about-the-clinic{
+        margin: 9.28rem auto 0;
+    }
+
+    .clinic-div{
+        margin: 6.68rem auto 0;
+        display: block;
+    }
+
+    .clinic-div img{
+        float: left;
+        max-width: 37rem;
+        padding: 0 2rem 1rem 0;
+    }
+
+    .clinic-para{
+        font-size: 1rem;
+    }
+
+    /* ---------- Doctor Section ---------- */
+
+    .meet-your-doctor{
+        margin-top: 6.5rem;
+    }
+
+    .doctor-heading-div{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .doc-info-container{
+        margin: 6.48rem auto 0;
+    }
+
+    .doc-info-container img{
+        width: 30%;
+        object-fit: cover;
+    }
+
+    .doc-name{
+        font-size: clamp(2.2rem, 3.7vw, 4.36rem);
+    }
+
+    .doc-edu{
+        margin-top: 2.77rem;
+        font-size: clamp(1.9rem, 2.5vw, 3.37rem);
+    }
+
+    .doc-para{
+        margin-top: 2.77rem;
+        font-size: 1rem;
+    }
+}
+
+
+/* ---------------- Tablets (<=900px) ---------------- */
+
+@media (max-width: 900px){
+
+    /* ---------- Doctor Stack ---------- */
+
+    .doc-info-container{
+        flex-direction: column;
+        margin: 70px 32px 0 32px;
+        padding-bottom: 60px;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .doc-info-container img{
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ------------ Mobile Phones (<=700px) --------------- */
+
+@media(max-width: 700px){
+
+    h2{
+        font-size: 1.66rem;
+        margin: 0 auto;
+    }
+
+    hr{
+        margin-top: 1.87rem;
+        width: calc(100% - 1.5rem);
+    }
+
+    /* ---------- Clinic Section ---------- */
+
+    .about-the-clinic{
+        margin: 6.68rem auto 0;
+    }
+
+    .clinic-container{
+        width: min(100% - 0rem, 1798px);
+    }
+
+    .clinic-heading-div{
+        gap: 2rem;
+    }
+
+    .clinic-heading-div::before,
+    .clinic-heading-div::after{
+        height: 2px;
+        margin: 0 auto;
+    }
+
+    .clinic-div{
+        display: flex;
+        flex-direction: column;
+        margin: 4.68rem auto 0;
+        gap: 0.81rem;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .clinic-div img{
+        display: block;
+        width: 100%;
+        max-width: 21.87rem;
+        padding: 0;
+    }
+
+    .clinic-para{
+        padding: 0 1rem;
+        font-size: 0.92rem;
+        font-weight: 200;
+    }
+
+       /* ---------- Doctor Section ---------- */
+
+    .meet-your-doctor{
+        margin-top: 4.18rem;
+    }
+
+    .doctor-container{
+        width: min(100% - 0rem, 1798px);
+    }
+
+    .doc-info-container{
+        padding: 0;
+        margin: 4.68rem auto 0;
+        width: min(100% - 2.5rem, 1798px);
+    }
+
+    .doc-info-container img{
+        margin: 0 auto;
+        width: 56%;
+    }
+
+    .doc-name{
+        font-size: 1.67rem;
+    }
+
+    .doc-edu{
+        margin-top: 1.06rem;
+        font-size: 1.11rem;
+    }
+
+    .doc-college{
+        margin-top: 0.37rem;
+        font-size: 0.92rem;
+    }
+
+    .doc-para{
+        margin-top: 1.06rem;
+        font-size: 0.92rem;
+        font-weight: 200;
+        text-align: left;
+    }
+
+    .doc-desc-2{
+        margin-top: 0.9rem;
+    }
+}

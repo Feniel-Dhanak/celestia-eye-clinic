@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestia Eye Clinic</title>
+
+    <!--------------------- STYLESHEETS ---------------------->
+    <link rel="stylesheet" href="./Stylesheets/base.css">
+    <link rel="stylesheet" href="./Stylesheets/header.css">
+    <link rel="stylesheet" href="./Stylesheets/footer.css">
+    <link rel="stylesheet" href="./Stylesheets/about.css">
+
+    <!------------------ Embedded Fonts and Icons---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+    <!-------------------- HEADER SECTION -------------------->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./images/Logo Image.png" alt="Clinic Logo">
+            </div>
+
+            <ul class="nav-items" id="navItems">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+            <p class="header-aptmt">Appointment: +91 3126457918</p>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navItems">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+    </header>
+
+    <!----------------- ABOUT THE CLINIC -------------------->
+    <main clas="main-content">
+        <section class="about-the-clinic">
+            <div class="clinic-container">
+                <div class="clinic-heading-div">
+                    <h2 class="clinic-heading">About The Clinic</h2>
+                </div>
+
+                <div class="clinic-div">
+                    <img src="./images/abt_clinic_photo.png">
+                    <p class="clinic-para">
+                        Welcome to Celestia Eye Clinic, where advanced clinical expertise meets deeply personalized care.
+                        Led by Dr. Claire Jenkins, our team brings over a decade of specialized microsurgical experience to
+                        protect and enhance your vision. We believe that exceptional eye care requires a dedicated approach.
+                        By rejecting rushed appointments, we take the time to truly understand your needs and design customized
+                        care plans tailored perfectly to your unique lifestyle.
+                        <br>
+                        <br>
+                        Our facility pairs this dedicated patient focus with advanced technology. We utilize modern diagnostic
+                        imaging and precise laser systems to ensure maximum treatment accuracy and successful, comfortable
+                        outcomes. From routine eye health management to specialized procedures—including advanced cataract
+                        surgery, laser vision correction (LASIK/SMILE), and retinal therapies—Celestia Eye Clinic is committed to
+                        providing trusted, world-class care for your sight.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ----------------- MEET YOUR DOCTOR --------------- -->
+        <section class="meet-your-doctor" id="doctor">
+            <div class="doctor-container">
+                <div class="doctor-heading-div">
+                    <h2 class="doctor-heading">About The Doctor</h2>
+                </div>
+
+                <div class="doc-info-container">
+                    <img src="./images/HP_Doctor_Img.png">
+
+                    <div class="doc-info">
+                        <p class="doc-name">Dr. Claire Jenkins, MD</p>
+                        <p class="doc-edu">Ophthalmologist & Refractive Surgeon</p>
+                        <p class="doc-college">BSc, MD, FRCSC (Fellow of the Royal College of Surgeons)</p>
+                        <p class="doc-para">
+                            Dr. Claire Jenkins is a board-certified ophthalmologist and refractive
+                            surgeon specializing in advanced vision correction, custom LASIK, and premium cataract surgeries.
+                            She holds a Bachelor of Science (BSc) and earned her Doctor of Medicine (MD) before completing her
+                            rigorous residency training in ophthalmology. As a distinguished Fellow of the Royal College of Surgeons
+                            (FRCSC), she maintains the highest standards of clinical excellence, safety, and surgical precision in her field.
+                            <br>
+                            <br>
+                            With over a decade of dedicated clinical experience, Dr. Jenkins combines state-of-the-art diagnostic
+                            technology with a meticulous microsurgical approach to deliver world-class eye care. Her patient-centric
+                            philosophy focuses on clear communication, absolute safety, and long-term visual wellness. Rather than
+                            offering one-size-fits-all treatments, she takes the time to understand each patient's daily routine, craft
+                            customized care plans, and ensure outcomes that truly enhance their unique lifestyle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--------------------- FOOTER SECTION ----------------------->
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="footer-div">
+
+                <div class="footer-content address-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading address-heading">Address</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details address-content">
+                            Celestia Eye Clinic<br>
+                            302, 3rd Floor, Silver Pearl Building,<br>
+                            Junction of Waterfield Road & 30th<br>
+                            Road, Bandra West, Mumbai, Maharashtra 400050
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-content contact-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading contact-heading">Contact</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">+91 5649721974 / 3126457918</p>
+                        <p class="footer-content-details">celestiaeyeclinic@mail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-content hours-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading hours-heading">Hours</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">Mon - Fri</p>
+                        <p class="footer-content-details">10AM - 6PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-content social-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading social-heading">Social</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <a class="footer-content-details instagram" href="https://www.instagram.com/theshahmedia/" target="_blank" rel="noopener">
+                            <span><i class="bi bi-instagram"></i> Instagram</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details youtube" href="https://www.youtube.com/@RishabhShahCreates" target="_blank" rel="noopener">
+                            <span><i class="bi bi-youtube"></i> YouTube</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details facebook" href="https://www.facebook.com/people/The-Shah-Media/61550045405942/" target="_blank" rel="noopener">
+                            <span><i class="bi bi-facebook"></i> Facebook</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-line">
+
+            <p class="copyright">Copyright <span class="copyright-span">Celestia Eye Clinic</span> All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // 
+        const toggles = document.querySelectorAll(".footer-toggle");
+        toggles.forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                toggle.classList.toggle("active");
+                toggle.nextElementSibling.classList.toggle("active");
+            })
+        })
+
+        // Mobile Navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navItems = document.getElementById('navItems');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navItems.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close the menu after tapping a link (mobile UX)
+        navItems.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                navItems.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Make nav menu appear after header
+        const header = document.querySelector("header");
+        function updateHeaderheight(){
+            document.documentElement.style.setProperty(
+                "--header-height",
+                `${header.offsetHeight}px`
+            );
+        }
+        updateHeaderheight();
+        window.addEventListener("resize", updateHeaderheight);
+
+        // Close the menu if the viewport is resized back up to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 900) {
+                navItems.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+
+</body>
+</html>
