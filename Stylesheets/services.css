@@ -1,0 +1,355 @@
+/* ================= SERVICE SECTION ================= */
+
+.service-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 9rem;
+    align-items: center;
+    gap: 0;
+}
+
+.service-container{
+    width: min(100% - 0rem, 1920px);
+    margin: 0;
+}
+
+.service-heading-div{
+    display: flex;
+    margin: 0 auto;
+    gap: 2.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-heading-div::before,
+.service-heading-div::after{
+    content: "";
+    flex: 1;
+    height: 3px;
+    max-width: 257px;
+    background: #000000;
+}
+
+
+/* -------- Service Blocks ---------- */
+.service-blocks-container{
+    display: flex; 
+    flex-direction: column;
+    margin: 10.31rem auto 0;
+    width: 100%;
+}
+
+.service-block{
+    position: relative;
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    background-color: #94E4D3;
+}
+
+.service-text{
+    position: relative;
+    z-index: 2;
+    width: 47%;
+    padding: 3.25rem 3.5rem 11.18rem;
+}
+
+.service-name{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.service-desc{
+    padding-top: 2.06rem;
+    font-size: 1.68rem;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.service-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.service-image::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to right,
+        #94E4D3 0%,
+        #94E4D3 5%,
+        transparent 35%
+    );
+}
+
+.service-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+}
+
+.service-block:nth-child(even){
+    background-color: #56DED7;
+}
+
+.service-block:nth-child(even) .service-image{
+    left: 0;
+    right: auto;
+}
+
+.service-block:nth-child(even) .service-image::before{
+    background: linear-gradient(
+        to left,
+        #56DED7 0%,
+        #56DED7 5%,
+        transparent 35%
+    );
+}
+
+.service-block:nth-child(even) .service-text{
+    margin-left: auto;
+    text-align: right;
+}
+
+.service-header{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.service-chevron{
+    display: none;
+}
+
+.service-close{
+    display: none;
+}
+
+
+/* ====================================
+    RESPONSIVE BREAKPOINTS
+==================================== */
+
+/* ------------ Large Laptop Screens (<=1600px) -------------- */
+
+@media (max-width: 1600px){
+
+    h2{
+        font-size: clamp(2.25rem, 3.7vw, 5.31rem);
+    }
+
+    /* ---------- Service Section ---------- */
+    .service-text{
+        width: 47%;
+    }
+
+    .service-name{
+        font-size: 2.4rem;
+    }
+
+    .service-desc{
+        font-size: 1.28rem;
+    }
+
+    .service-image{
+        width: 53%;
+    }
+
+}
+
+
+/* ------------ Small Laptop Screens (<=1200px) ------------ */
+
+@media (max-width: 1200px){
+
+    h2{
+        font-size: clamp(2.25rem, 3.7vw, 5.31rem);
+    }
+
+    /* ---------- Service Section ---------- */
+
+    .service-section{
+        margin-top: 6rem;
+    }
+
+    .service-blocks-container{
+        margin: 8.31rem auto 0;
+    }
+
+    .service-text{
+        padding: 3rem 3.25rem 8.93rem;
+        width: 47%;
+    }
+
+    .service-name{
+        font-size: 2rem;
+    }
+
+    .service-desc{
+        font-size: 1rem;
+    }
+
+    .service-image{
+        width: 56%;
+    }
+}
+
+
+/* ------------ Mobile Phones (<=700px) --------------- */
+
+@media(max-width: 700px){
+
+    h2{
+        font-size: 1.66rem;
+        margin: 0 auto;
+    }
+
+    hr{
+        margin-top: 1.87rem;
+        width: calc(100% - 1.5rem);
+    }
+
+    /* ---------- Service Section ---------- */
+
+    .service-section{
+        margin-top: 7.5rem;
+    }
+
+    .service-blocks-container{
+        margin: 3rem auto 0;
+        padding: 0 1.2rem;
+    }
+
+    .service-block{
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1rem;
+        height: auto;
+        padding: 1.1rem 0;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(22, 58, 95, 0.15);
+    }
+
+    .service-block:last-child{
+        border-bottom: none;
+    }
+
+    .service-block:nth-child(even){
+        background-color: transparent;
+    }
+
+    .service-block.expanded{
+        background-color: rgba(148, 228, 211, 0.2);
+    }
+
+    .service-image{
+        position: relative;
+        order: 1;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 0.75rem;
+        flex-shrink: 0;
+        transition: width 0.35s ease, height 0.35s ease;
+    }
+
+    .service-block:nth-child(even) .service-image{
+        left: auto;
+    }
+
+    .service-block.expanded .service-image{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .service-image::before{
+        display: none;
+    }
+
+    .service-close{
+        display: none;
+        position: absolute;
+        top: 0.6rem;
+        right: 0.6rem;
+        width: 1.9rem;
+        height: 1.9rem;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .service-close i{
+        font-size: 0.85rem;
+        color: #163A5F;
+    }
+
+    .service-block.expanded .service-close{
+        display: flex;
+    }
+
+    .service-text{
+        order: 2;
+        width: 100%;
+        flex: 1 1 11rem;
+        min-width: 11rem;
+        padding: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .service-block:nth-child(even) .service-text{
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .service-header[role="button"]{
+        cursor: pointer;
+    }
+
+    .service-name{
+        flex: 1;
+        font-size: 1.05rem;
+    }
+
+    .service-chevron{
+        display: block;
+        font-size: 1rem;
+        color: #163A5F;
+        flex-shrink: 0;
+        transition: transform 0.35s ease;
+    }
+
+    .service-block.expanded .service-chevron{
+        transform: rotate(180deg);
+    }
+
+    .service-desc{
+        padding-top: 0.4rem;
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .service-block.expanded .service-desc{
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        overflow: visible;
+    }
+}
