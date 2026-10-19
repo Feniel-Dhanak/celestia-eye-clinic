@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestia Eye Clinic</title>
+
+    <!--------------------- STYLESHEETS ---------------------->
+    <link rel="stylesheet" href="./Stylesheets/base.css">
+    <link rel="stylesheet" href="./Stylesheets/header.css">
+    <link rel="stylesheet" href="./Stylesheets/footer.css">
+    <link rel="stylesheet" href="./Stylesheets/contact-us.css">
+
+    <!------------------ Embedded Fonts and Icons---------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+    <!-------------------- HEADER SECTION -------------------->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./images/Logo Image.png" alt="Clinic Logo">
+            </div>
+
+            <ul class="nav-items" id="navItems">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+            <p class="header-aptmt">Appointment: +91 3126457918</p>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navItems">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="main-content">
+
+        <!------------------- CONTACT SECTION -------------------->
+        <section class="contact-section">
+            <div class="contact-div">
+
+                <!--------------- Form Div--------------->
+                <div class="form-div">
+                    <h2 class="form-heading">Book an Appointment</h2>
+
+                    <div class="form-bg-div">
+                        <form>
+                            <div class="form-name-div">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder=" eg: Akhil Kumar" required>
+                            </div>
+
+                            <div class="form-phone-div">
+                                <label for="phone">Phone Number</label>
+                                <input type="text" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]+" required>
+                            </div>
+
+                            <div class="form-date-select">
+                                <label for="date">Select available date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+
+                            <div class="form-time-select">
+                                <label for="time">Select available time</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+
+                            <div class="form-reason-div">
+                                <label for="reason">Reason for visit</label>
+                                <input type="text" id="reason" name="reason" required>
+                            </div>
+
+                            <div class="form-note-div">
+                                <label class="note-label">We'll confirm your booking by a call.</label>
+                            </div>
+
+                            <div class="form-submit-btn">
+                                <input class="form-btn" type="submit" value="Book">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="or-text-div">
+                    <h4>OR</h4>
+                </div>
+
+                <!-- ------------- MAP SECTION --------------- -->
+                <div class="contact-map-div">
+                    <h3 class="contact-map-heading">Visit us directly</h3>
+                    <div class="google-map-div">
+                        <iframe 
+                            title="Celestia Eye Clinic location"
+                            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d755.5068957108817!2d72.83399533085242!3d19.062110740804513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s302%2C%203rd%20Floor%2C%20Silver%20Pearl%20Building%2CJunction%20of%20Waterfield%20Road%20%26%2030th%20Road%2CBandra%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1788752774085!5m2!1sen!2sin" width="417" height="417" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+                    </div>
+                    <div class="addr-div">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        
+                        <div class="addr-content-r">
+                            <h5 class="addr-heading">Address</h5>
+                            <p class="address">
+                                Celestia Eye Clinic<br>
+                                302, 3rd Floor, Silver Pearl Building,<br>
+                                Junction of Waterfield Road & 30th Road,<br>
+                                Bandra West, Mumbai, Maharashtra 400050
+                            </p>
+                            <p class="direction-para">Get Directions →</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- --------------- SOCIAL SECTION ---------------- -->
+        <section class="social-section">
+            <h2 class="social-section-heading">Stay in Touch</h2>
+            <div class="social-btns-div">
+                <button class="social-btn instagram-btn">Instagram</button>
+                <button class="social-btn youtube-btn">YouTube</button>
+                <button class="social-btn facebook-btn">Facebook</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!--------------------- FOOTER SECTION ----------------------->
+    <footer class="footer">
+
+        <div class="footer-container">
+            <div class="footer-div">
+
+                <div class="footer-content address-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading address-heading">Address</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details address-content">
+                            Celestia Eye Clinic<br>
+                            302, 3rd Floor, Silver Pearl Building,<br>
+                            Junction of Waterfield Road & 30th<br>
+                            Road, Bandra West, Mumbai, Maharashtra 400050
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-content contact-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading contact-heading">Contact</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">+91 5649721974 / 3126457918</p>
+                        <p class="footer-content-details">celestiaeyeclinic@mail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-content hours-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading hours-heading">Hours</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <p class="footer-content-details">Mon - Fri</p>
+                        <p class="footer-content-details">10AM - 6PM</p>
+                    </div>
+                </div>
+
+                <div class="footer-content social-container">
+                    <button  class="footer-toggle">
+                        <h4 class="content-heading social-heading">Social</h4>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="footer-dropdown">
+                        <a class="footer-content-details instagram" href="https://www.instagram.com/theshahmedia/" target="_blank" rel="noopener">
+                            <span><i class="bi bi-instagram"></i> Instagram</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details youtube" href="https://www.youtube.com/@RishabhShahCreates" target="_blank" rel="noopener">
+                            <span><i class="bi bi-youtube"></i> YouTube</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                        <a class="footer-content-details facebook" href="https://www.facebook.com/people/The-Shah-Media/61550045405942/" target="_blank" rel="noopener">
+                            <span><i class="bi bi-facebook"></i> Facebook</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="footer-line">
+
+            <p class="copyright">Copyright <span class="copyright-span">Celestia Eye Clinic</span> All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggles = document.querySelectorAll(".footer-toggle");
+        toggles.forEach((toggle) => {
+            toggle.addEventListener("click", () => {
+                toggle.classList.toggle("active");
+                toggle.nextElementSibling.classList.toggle("active");
+            });
+        });
+
+        const navToggle = document.getElementById("navToggle");
+        const navItems = document.getElementById("navItems");
+        const header = document.querySelector("header");
+
+        navToggle.addEventListener("click", () => {
+            const isOpen = navItems.classList.toggle("open");
+            navToggle.classList.toggle("open", isOpen);
+            navToggle.setAttribute("aria-expanded", isOpen);
+        });
+
+        navItems.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navItems.classList.remove("open");
+                navToggle.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        function updateHeaderHeight() {
+            document.documentElement.style.setProperty(
+                "--header-height",
+                `${header.offsetHeight}px`
+            );
+        }
+
+        updateHeaderHeight();
+        window.addEventListener("resize", updateHeaderHeight);
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900) {
+                navItems.classList.remove("open");
+                navToggle.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
