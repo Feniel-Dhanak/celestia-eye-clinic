@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Stylesheets/header.css">
     <link rel="stylesheet" href="./Stylesheets/footer.css">
     <link rel="stylesheet" href="./Stylesheets/index.css">
+    <link rel="stylesheet" href="./Stylesheets/landscape.css">
 
     <!------------------ Embedded Fonts and Icons---------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,7 +71,9 @@
 
         <!--------------- APPOINTMENT FORM --------------->
         <div class="apntmt-form-div">
-            <form class="apntmt-form" action="POST">
+            <form class="apntmt-form" method="POST" novalidate>
+
+                <p class="form-message" id="formMessage" role="alert" hidden></p>
                 
                 <div class="form-name-div">
                     <label for="name">Full Name</label>
@@ -79,7 +82,7 @@
 
                 <div class="form-phone-div">
                     <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone" minlength="10" maxlength="10" pattern="[0-9]+" required>
+                    <input type="text" id="phone" name="phone" inputmode="numeric" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
                 </div>
 
                 <div class="form-date-select">
@@ -358,6 +361,42 @@
         const callNow = document.querySelector(".secondary")
         callNow.addEventListener("click", () => {
             window.location.href = "tel:+91312457918";
+        });
+
+        const apptForm = document.querySelector(".apntmt-form");
+        const formMessage = document.getElementById("formMessage");
+
+        function showFormMessage(text, type){
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            formMessage.hidden = false;
+        }
+
+        apptForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            apptForm.classList.add("was-validated");
+
+            if (!apptForm.checkValidity()) {
+                showFormMessage("Please fill in all fields correctly (phone must be 10 digits).", "error");
+                apptForm.querySelector(":invalid").focus();
+                return;
+            }
+
+            // TODO: send data to your backend
+            showFormMessage("Thank you! We'll confirm your booking by a call.", "success");
+            apptForm.reset();
+            apptForm.classList.remove("was-validated");
+        });
+
+        apptForm.addEventListener("input", () => { formMessage.hidden = true; });
+
+        // Bottom CTA function
+        const bottomCta = document.querySelector(".bottom-cta");
+        bottomCta.addEventListener("click", () => {
+            appointmentForm.classList.add("open");
+            setTimeout(() => {
+                appointmentForm.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 50);
         });
     </script>
 

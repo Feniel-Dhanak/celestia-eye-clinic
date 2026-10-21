@@ -1,0 +1,208 @@
+/* Stop iOS Safari from inflating text when the phone rotates */
+html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+@media (orientation: landscape) and (max-height: 500px){
+
+    /* ---------- Header ---------- */
+    .header-aptmt{
+        margin-right: 0;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer{
+        margin-top: 4rem;
+    }
+
+    /* ---------- Spacing between sections (all pages) ---------- */
+    hr{
+        margin-top: 3rem;
+    }
+
+    .services,
+    .meet-your-doctor,
+    .features-section,
+    .bottom-cta-section{
+        margin-top: 4rem;
+    }
+
+    /* ---------- Appointment pop-up form (index.html) ---------- */
+    .apntmt-form-div{
+        width: min(640px, calc(100% - 2rem));
+        max-height: calc(100dvh - 1rem);
+        padding: 1rem 1.5rem;
+    }
+
+    .apntmt-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 0.6rem;
+    }
+
+    .apntmt-form > div{
+        margin-top: 0;
+    }
+
+    .form-message,
+    .form-reason-div{
+        grid-column: 1 / -1;
+    }
+
+    .apntmt-form label{
+        margin-bottom: 0.2rem;
+        font-size: 0.75rem;
+    }
+
+    .apntmt-form input{
+        height: 2.3rem;
+        font-size: 0.8rem;
+    }
+
+    .apntmt-form .form-btn{
+        height: 2.3rem;
+    }
+
+    .form-submit-btn input,
+    .form-cancel-btn input{
+        margin-top: 0.3rem;
+    }
+
+    /* ---------- Contact page form ---------- */
+    .form-bg-div{
+        padding: 1.75rem 1.5rem;
+    }
+
+    .form-name-div,
+    .form-phone-div,
+    .form-date-select,
+    .form-time-select{
+        margin-bottom: 1.25rem;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .testimonial-section{
+        margin-top: 6rem;
+    }
+}
+
+/* ---------- Hamburger layout (width <= 900px) ---------- */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px){
+
+    .nav-items{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.75rem;
+        padding: 0.9rem 1rem;
+        max-height: calc(100dvh - var(--header-height, 3.5rem));
+        overflow-y: auto;
+    }
+
+    .hero h1{
+        margin-top: 4.5rem;
+    }
+
+    .hero-buttons{
+        margin-top: 1.5rem;
+    }
+
+    .hero-image{
+        height: min(340px, 75dvh);
+    }
+
+    .doc-info-container img{
+        max-width: min(420px, 60dvh);
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px){
+ 
+    .footer{
+        margin-top: 4rem;
+        padding: 0 1.5rem 0.5rem;
+    }
+ 
+    .footer-div{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-between;
+        align-items: start;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+        margin: 0;
+        padding: 1.25rem 0 0;
+    }
+ 
+    .footer-content{
+        border-bottom: none;
+        min-width: 0;
+    }
+ 
+    /* Always show content; no accordion in landscape */
+    .footer-toggle{
+        display: block;
+        width: auto;
+        padding: 0;
+        cursor: default;
+        pointer-events: none;
+    }
+ 
+    .footer-toggle i,
+    .footer-toggle.active i{
+        display: none;
+    }
+ 
+    .footer-dropdown,
+    .footer-dropdown.active{
+        max-height: none;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+ 
+    .content-heading{
+        font-size: 0.95rem;
+        font-weight: 600;
+    }
+ 
+    .footer-content-details{
+        margin: 0.4rem 0 0;
+        padding: 0;
+        font-size: 0.72rem;
+    }
+ 
+    .address-content{
+        line-height: 1.5;
+    }
+ 
+    .footer a.footer-content-details{
+        gap: 0.5rem;
+    }
+ 
+    .social-container{
+        min-width: 0;
+        width: auto;
+    }
+ 
+    .footer-line{
+        display: block;
+        margin-top: 0.75rem;
+    }
+ 
+    .copyright{
+        padding: 0.6rem 0;
+        margin: 0 auto;
+        font-size: 0.65rem;
+    }
+}
+ 
+/* Narrower landscape phones: 2 x 2 grid */
+@media (max-width: 800px) and (orientation: landscape) and (max-height: 500px){
+ 
+    .footer-div{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}

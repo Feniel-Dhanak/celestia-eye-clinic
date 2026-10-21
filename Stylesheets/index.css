@@ -103,7 +103,7 @@ button {
     transform: translate(-50%, -50%);
     padding: 2rem 3rem;
     width: min(400px, calc(100% - 2rem));
-    max-height: calc(100vh -  4rem);
+    max-height: calc(100dvh -  4rem);
     clip-path: inset(0 round 15px);
     overflow-y: auto;
     overflow-x: hidden;
@@ -175,6 +175,18 @@ input:focus{
 input::placeholder{
     color: #999;
 }
+
+.form-message{
+    grid-column: 1 / -1;
+    margin: 0.75rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+.form-message.error{ background: #fde8e8; color: #b42318; }
+.form-message.success{ background: #e6f6f0; color:#05603a; }
+.apntmt-form.was-validated input:invalid{ border-color:#b42318; }
 
 .form-date-select{
     margin-top: 1.5rem;
@@ -411,7 +423,9 @@ input::placeholder{
 
 .full-bio{
     display: block;
+    position: relative;
     margin: 0 auto;
+    width: fit-content;
     font-size: clamp(1.51rem, 5vw, 4.07rem);
     font-weight: 400;
     color: #163A5F;
@@ -553,7 +567,7 @@ h3{
     transform: translate(-50%, -50%);
     padding: 1.5rem 2.25rem;
     width: min(300px, calc(100% - 1.5rem));
-    max-height: calc(100vh - 3.75rem - 3rem);
+    max-height: calc(100dvh - 3.75rem - 3rem);
     overflow-y: auto;
 
     backdrop-filter: blur(9.75px);
@@ -1057,7 +1071,7 @@ h3{
     /* ---------- Appointment Form ----------- */
     .apntmt-form-div{
         width: calc(100% - 1.5rem);
-        max-height: calc(100vh - 4rem);
+        max-height: calc(100dvh - 4rem);
         overflow-y: auto;
     }
 
